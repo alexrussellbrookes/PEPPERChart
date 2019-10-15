@@ -31,9 +31,9 @@ public class LineChart extends LineChartTemplate {
     String getConcreteChartSpec(String var) {
         StringBuilder returnString = new StringBuilder();
         returnString.append(getLineChartSpec(var));
-        returnString.append(var + ".dataPoints(" + dataPoints + "); " + "\n");
+        returnString.append(var).append(".dataPoints(").append(dataPoints).append(");\n");
         for (double targetLine : targetLines) {
-            returnString.append(var + ".targetLine(" + targetLine + "); " + "\n");
+            returnString.append(var).append(".targetLine(").append(targetLine).append(");\n");
         }
         return returnString.toString();
     }
@@ -73,7 +73,7 @@ public class LineChart extends LineChartTemplate {
         String chartID = chartUpdate.getChartName();
         String selectionName = chartUpdate.getSelectionName();
         String chartModel = chartUpdate.getChartModel();
-        update.append(chartID + ".updateMode(" + animationType + ");\n");
+        update.append(chartID).append(".updateMode(").append(animationType).append(");\n");
         update.append(getJSFunctionCall(selectionName, "datum", data));
         update.append(getJSFunctionCall(selectionName, "call", chartModel));
         update.append(getJSFunctionCall(chartID, "update", ""));

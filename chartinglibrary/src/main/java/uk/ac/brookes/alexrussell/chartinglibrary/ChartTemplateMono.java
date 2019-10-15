@@ -82,7 +82,7 @@ public abstract class ChartTemplateMono {
     }
 
     String getGenericAccessor(String axisType, String dataType, String chartID) {
-        return chartID + "." + axisType + "(function(d) { return(d." + dataType + "==null ? null : +d." + dataType + ");});" + "\n";
+        return chartID + "." + axisType + "(function(d) { return(d." + dataType + "==null ? null : +d." + dataType + ");});\n";
     }
 
     String getInitData() {
@@ -125,7 +125,7 @@ public abstract class ChartTemplateMono {
     }
 
     String getXAccessor(String chartID, String dataType, ChartTypes chartType) {
-        return chartID + ".x(function(d) { return d." + dataType + ";});" + "\n";
+        return chartID + ".x(function(d) { return d." + dataType + ";});\n";
     }
 
     /**

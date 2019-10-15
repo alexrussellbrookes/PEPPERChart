@@ -13,14 +13,14 @@ abstract class ChartTemplateMult extends ChartModifiable {
     }
 
     String getAxisLabelsSpec(String var) {
-        String returnString = "";
+        StringBuilder returnString = new StringBuilder();
         if (yAxisLabel != null) {
-            returnString += getJSFunctionCallStringInput(var, "yAxisLabel", yAxisLabel);
+            returnString.append(getJSFunctionCallStringInput(var, "yAxisLabel", yAxisLabel));
         }
         if (xAxisLabel != null) {
-            returnString += getJSFunctionCallStringInput(var, "xAxisLabel", xAxisLabel);
+            returnString.append(getJSFunctionCallStringInput(var, "xAxisLabel", xAxisLabel));
         }
-        return returnString;
+        return returnString.toString();
     }
 
     @Override
@@ -45,15 +45,15 @@ abstract class ChartTemplateMult extends ChartModifiable {
 
     @Override
     String getXAccessor(String chartID, String dataType, ChartTypes chartType) {
-        String returnString = "";
+        StringBuilder returnString = new StringBuilder();
         if (chartType == ChartTypes.TIME_SERIES) {
-            returnString += chartID + ".x(function(d) { return parseDate(d." + dataType + ");});" + "\n";
+            returnString.append(chartID).append(".x(function(d) { return parseDate(d.").append(dataType).append(");});\n");
         } else if (chartType == ChartTypes.LINEAR) {
-            returnString += chartID + ".x(function(d) { return +d." + dataType + ";});" + "\n";
+            returnString.append(chartID).append(".x(function(d) { return +d.").append(dataType).append(";});\n");
         } else if (chartType == ChartTypes.CATEGORICAL) {
-            returnString += chartID + ".x(function(d) { return d." + dataType + ";});" + "\n";
+            returnString.append(chartID).append(".x(function(d) { return d.").append(dataType).append(";});\n");
         }
-        return returnString;
+        return returnString.toString();
     }
 
     /**

@@ -31,22 +31,22 @@ abstract class LineChartTemplate extends ChartTemplateMult {
         StringBuilder returnString = new StringBuilder();
         returnString.append(var).append(".zoomOn(").append(zoom).append("); ").append("\n");
         if (strokeColor != null) {
-            returnString.append(var).append(".strokeColor(\"").append(strokeColor).append("\"); ").append("\n");
+            returnString.append(var).append(".strokeColor(\"").append(strokeColor).append("\");\n");
         }
         if (curveType != null) {
-            returnString.append(var).append(".curveType(").append(curveType).append("); ").append("\n");
+            returnString.append(var).append(".curveType(").append(curveType).append(");\n");
         }
         if (contextDateFormat != null) {
-            returnString.append(var).append(".contextTimeFormat(\"").append(contextDateFormat).append("\"); ").append("\n");
+            returnString.append(var).append(".contextTimeFormat(\"").append(contextDateFormat).append("\");\n");
         }
         if (tooltipLabelX != null) {
-            returnString.append(var).append(".tooltipLabelX(\"").append(tooltipLabelX).append("\"); ").append("\n");
+            returnString.append(var).append(".tooltipLabelX(\"").append(tooltipLabelX).append("\");\n");
         }
         if (tooltipLabelY != null) {
-            returnString.append(var).append(".tooltipLabelY(\"").append(tooltipLabelY).append("\"); ").append("\n");
+            returnString.append(var).append(".tooltipLabelY(\"").append(tooltipLabelY).append("\");\n");
         }
         if (tooltipTimeFormat != null) {
-            returnString.append(var).append(".tooltipTimeFormat(\"").append(tooltipTimeFormat).append("\"); ").append("\n");
+            returnString.append(var).append(".tooltipTimeFormat(\"").append(tooltipTimeFormat).append("\");\n");
         }
         return returnString.toString();
     }

@@ -38,9 +38,9 @@ public class CustomChart extends ChartModifiable {
     String getJavaScriptSpec(String chartName, String chartModelName, String selectionName) {
         StringBuilder returnString = new StringBuilder();
         //build the chart
-        returnString.append("var " + chartName + " = " + type + "(); ");
+        returnString.append("var ").append(chartName).append(" = ").append(type).append("(); ");
         returnString.append(chartModel.getChartModelSpec(chartName));
-        returnString.append(chartName + ".timeScale(" + Boolean.toString(getTimeScale(getChartType())) + ");" + "\n");
+        returnString.append(chartName).append(".timeScale(").append(Boolean.toString(getTimeScale(getChartType()))).append(");\n");
 
         //Add the marks to the chart
         for (ChartComponent chartComponent : chartComponents) {
@@ -48,8 +48,8 @@ public class CustomChart extends ChartModifiable {
         }
 
         //Create the selection and use it to call the chart
-        returnString.append("var " + selectionName + " = d3.select(\"#" + chartName + "\"); ");
-        returnString.append(selectionName + ".call(" + chartName + "); ");
+        returnString.append("var ").append(selectionName).append(" = d3.select(\"#").append(chartName).append("\");\n");
+        returnString.append(selectionName).append(".call(").append(chartName).append(");\n");
 
         return returnString.toString();
     }

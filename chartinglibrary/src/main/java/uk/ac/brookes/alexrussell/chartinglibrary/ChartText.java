@@ -24,13 +24,13 @@ public class ChartText extends ChartMark2D {
 
     @Override
     String getAdditionalSpec() {
-        String returnString = "";
+        StringBuilder returnString = new StringBuilder();
         if (fontFamily != null) {
-            returnString += ".attr(\"font-family\", \"" + fontFamily + "\")\n";
+            returnString.append(".attr(\"font-family\", \"").append(fontFamily).append("\")\n");
         }
-        returnString += ".attr(\"font-size\", " + fontSize + ")\n"
-                + ".text(\"" + text + "\")";
-        return returnString;
+        returnString.append(".attr(\"font-size\", ").append(fontSize).append(")\n")
+                .append(".text(\"").append(text).append("\")");
+        return returnString.toString();
     }
 
     @Override

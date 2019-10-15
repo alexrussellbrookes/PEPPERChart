@@ -63,9 +63,9 @@ public class ChartPath extends ChartComponent {
         returnString.append(getXValueAssignment());
         returnString.append(".y(function (d) {return yScale(+d.yValue)})\n");
         if (curveType != null) {
-            returnString.append(".curve(" + curveType + ")");
+            returnString.append(".curve(").append(curveType).append(")");
         }
-        returnString.append("; \n" + "this.path = path;\n" + "var selection = focus.append(\"path\")\n" + " .datum(").append(dataArray)
+        returnString.append(";\nthis.path = path;\nvar selection = focus.append(\"path\")\n.datum(").append(dataArray)
                 .append(")\n").append("     .attr(\"fill\", \"none\")\n").append("     .attr(\"class\", \"").append(markRef).append("\")\n")
                 .append("     .attr(\"stroke\", \"").append(strokeColor).append("\")\n").append("     .attr(\"d\", path);\n")
                 .append(" this.selection = selection;\n").append("};");

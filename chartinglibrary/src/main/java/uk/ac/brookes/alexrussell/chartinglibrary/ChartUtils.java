@@ -125,19 +125,24 @@ public class ChartUtils {
     }
 
     static String getStyleSpec(String jsVar, String chartID, String objType, boolean dataPoints, String fill) {
-        String returnString = "";
+        StringBuilder returnString = new StringBuilder();
         String clip = chartID + "Clip";
-        returnString += jsVar + ".insertRule(\"." + chartID + objType + " {clip-path: url(#" + clip + ");}\", 0); " + "\n";
+        returnString.append(jsVar).append(".insertRule(\".").append(chartID).append(objType).append(" {clip-path: url(#").append(clip)
+        .append(");}\", 0);\n");
         if (dataPoints) {
             if (!fill.isEmpty()) {
-                returnString += jsVar + ".insertRule(\"." + chartID + "dot { fill: " + fill + "; stroke-width: 1.5px; clip-path: url(#" + clip + ");}\", 0); " + "\n";
+                returnString.append(jsVar).append(".insertRule(\".").append(chartID).append("dot { fill: ").append(fill)
+                        .append("; stroke-width: 1.5px; clip-path: url(#").append(clip).append(");}\", 0);\n");
             } else {
-                returnString += jsVar + ".insertRule(\"." + chartID + "dot { fill: white; stroke-width: 1.5px; clip-path: url(#" + clip + ");}\", 0); " + "\n";
+                returnString.append(jsVar).append(".insertRule(\".").append(chartID)
+                        .append("dot { fill: white; stroke-width: 1.5px; clip-path: url(#").append(clip).append(");}\", 0);\n");
             }
-            returnString += jsVar + ".insertRule(\"." + chartID + "invisible { fill: white; clip-path: url(#" + clip + "); opacity: 0;}\", 0); " + "\n";
-            returnString += jsVar + ".insertRule(\"div." + chartID + "tooltip { position: absolute; text-align: center; width: 180px; height: 60px; padding: 4px; font: 24px sans-serif; background: lightsteelblue; border: 0px; border-radius:10px; pointer-events: none;}\", 0); " + "\n";
+            returnString.append(jsVar).append(".insertRule(\".").append(chartID)
+                    .append("invisible { fill: white; clip-path: url(#").append(clip).append("); opacity: 0;}\", 0);\n");
+            returnString.append(jsVar).append(".insertRule(\"div.").append(chartID)
+                    .append("tooltip { position: absolute; text-align: center; width: 180px; height: 60px; padding: 4px; font: 24px sans-serif; background: lightsteelblue; border: 0px; border-radius:10px; pointer-events: none;}\", 0);\n");
         }
-        return returnString;
+        return returnString.toString();
     }
 
     static boolean isValidDataForm(ChartComponent chartComponent, ChartTypes chartType) {
