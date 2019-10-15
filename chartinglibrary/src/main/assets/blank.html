@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+    text {
+        font-family: sans-serif;
+    }
+</style>
+<body>
+    <script src="d3.min.js"></script>
+    <script src="ChartModel2Var.js"></script>
+    <script src="ChartModelMultVar.js"></script>
+    <script src="LineGraph.js"></script>
+    <script src="BubbleChart.js"></script>
+    <script src="PepperBubbleChart.js"></script>
+    <script src="ScatterPlot.js"></script>
+    <script src="CustomChart.js"></script>
+    <script src="BarChart.js"></script>
+    <script src="AreaChart.js"></script>
+    <script src="PieChart.js"></script>
+    <script src="Dot.js"></script>
+    <script src="PathFunctions.js"></script>
+    <script src="Context.js"></script>
+    <script src="Path.js"></script>
+    <script src="Axes.js"></script>
+    <script src="UpdateableTupleChart.js"></script>
+    <script src="ScatterPlot.js"></script>
+    <script src="ChartArrayUtils.js"></script>
+    <script>
+        d3.formatDefaultLocale({
+            "decimal": ".",
+            "thousands": ",",
+            "grouping": [3],
+            "currency": ["£", ""],
+            "dateTime": "%a %b %e %X %Y",
+            "date": "%d-%m-%Y",
+            "time": "%H:%M:%S",
+            "periods": ["AM", "PM"],
+            "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "shortDays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            "shortMonths": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        });
+
+        var parseDate = d3.timeParse("%d-%m-%Y %H:%M");
+</script>
+</body>
+</html>
