@@ -1,4 +1,4 @@
-# PEPPERChart: Basic charting library for Android
+# PEPPERChart: Basic charting for Android
 ![](https://github.com/alexrussellbrookes/PEPPERChart/blob/master/images/PEPPER_Logo.jpg)
 
 PEPPERChart is designed to make the construction of charts for Android as straight-forward as possible. It leverages the power of the 
