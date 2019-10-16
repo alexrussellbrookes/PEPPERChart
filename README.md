@@ -7,6 +7,8 @@ PEPPERChart is designed to make the construction of charts for Android as straig
 ## Resources
 [API Wiki](https://github.com/alexrussellbrookes/PEPPERChart/wiki)
 
+[Javadoc](https://javadoc.jitpack.io/com/github/alexrussellbrookes/PEPPERChart/5f15ce7824/javadoc/)
+
 ## Installing
 Add the library to your Android project like this:
 
