@@ -26,3 +26,7 @@ dependencies {
     implementation 'com.github.alexrussellbrookes:PEPPERChart:v1.0'
 }
 ```
+
+## Examples
+
+[![PEPPER Dashboard Demo](http://img.youtube.com/vi/_enwognHbwI/0.jpg)](https://youtu.be/_enwognHbwI)
