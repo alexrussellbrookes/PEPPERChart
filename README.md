@@ -2,7 +2,7 @@
 ![](https://github.com/alexrussellbrookes/PEPPERChart/blob/master/images/PEPPER_Logo.jpg)
 
 PEPPERChart is designed to make the construction of charts for Android as straight-forward as possible. It leverages the power of the 
-[D3.js](https://d3js.org/) library for Android developers, allowing them to quickly create basic chart types. The library has been created for the [PEPPER Project](http://www.pepper.eu.com/) which has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement 689810.
+[D3.js](https://d3js.org/) library for Android developers, allowing them to quickly create basic chart types. It is especially powerful with time series data. The library has been created for the [PEPPER Project](http://www.pepper.eu.com/) which has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement 689810.
 
 ## Resources
 [API Wiki](https://github.com/alexrussellbrookes/PEPPERChart/wiki)
